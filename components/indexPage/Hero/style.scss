@@ -1,0 +1,223 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0rem;
+  height: 92vh;
+
+  .heroText {
+    margin-right: 15rem;
+    max-width: 71.5rem;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .heroBlock {
+      padding-left: 10.5rem;
+      margin-bottom: 7.2rem;
+
+      .heroHeading {
+        margin-bottom: 1.6rem;
+        letter-spacing: -0.02em;
+        width: 71rem;
+      }
+
+      .descriptionHeading {
+        padding-bottom: 4.8rem;
+        max-width: 50.5rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 3rem;
+      }
+
+      .border {
+        width: 11.1rem;
+        margin-bottom: 4.8rem;
+        border-bottom: 0.1rem solid;
+        border-color: var(--white);
+        opacity: 0.15;
+      }
+      
+      .enumeration {
+        display: flex;
+        padding-bottom: 2rem;
+  
+        .blockEnumeration {
+          &:not(:last-of-type) {
+            margin-right: 7.4rem;
+          }
+  
+          .text {
+            margin-bottom: 0.8rem;
+            width: 8.9rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            color: var(--text-secondary);
+          }
+          
+          .number {
+            font-size: 4.8rem;
+            font-weight: 400;
+            line-height: 5.6rem;
+            width: 22rem;
+          }
+
+          .numbers {
+            font-size: 4.8rem;
+            font-weight: 400;
+            line-height: 5.6rem;
+          }
+        }
+      }
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 2rem;
+      max-width: 8.6rem;
+
+      .scrollImg {
+        margin-bottom: 1rem;
+      }
+
+      .scrollText {
+        margin-bottom: 3rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.8rem;
+        color: var(--white);
+        opacity: 0.32;
+      }
+    }
+  }
+
+  .heroVideo {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3.5rem);
+    z-index: 1;
+
+    .playHeroVideo {
+      width: 100%;
+    }
+  }
+
+  .blurHeroOne {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .blurHeroTwo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    max-width: 100%;
+    height: 82vh;
+  
+    .heroText {
+      margin-right: 0;
+      max-width: 28rem;
+      z-index: 10;
+      position: relative;
+  
+      .heroBlock {
+        padding-left: 0rem;
+        margin-bottom: 0;
+  
+        .heroHeading {
+          max-width: 28rem;
+          font-size: 4.8rem;
+          font-weight: 400;
+          line-height: 5.6rem;
+          margin-bottom: 1.6rem;
+          letter-spacing: 0.0em;
+        }
+  
+        .descriptionHeading {
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2rem;
+          padding-bottom: 2rem;
+          max-width: 28rem;
+        }
+  
+        .border {
+          margin-bottom: 2rem;
+        }
+        
+        .enumeration {
+          flex-wrap: wrap;
+          padding-bottom: 0;
+    
+          .blockEnumeration {
+            &:not(:last-of-type) {
+              margin-right: 6rem;
+            }
+
+            &:not(:first-of-type) {
+              margin-top: 1rem;
+            }
+
+            .text {
+              margin-bottom: 0.3rem;
+              font-size: 1.4rem;
+              font-weight: 400;
+              line-height: 1.8rem;
+              color: var(--text-secondary);
+            }
+            
+            .number {
+              font-size: 3rem;
+              font-weight: 400;
+              line-height: 3.8rem;
+            }
+
+            .numbers {
+              font-size: 3rem;
+              font-weight: 400;
+              line-height: 3.8rem;
+            }
+          }
+        }
+      }
+  
+      .scroll {
+        display: none;
+      }
+    }
+  
+    .heroVideo {
+      display: none;
+    }
+  
+    .blurHeroOne {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    .blurHeroTwo {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: 200%;
+      // display: none;
+    }
+  }
+}

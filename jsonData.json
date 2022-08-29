@@ -1,0 +1,16 @@
+{
+  "wallet1": {
+  "wallet": "0:6897059fb69b612ed721b8201d9420cfc02a2e8c926468fe521e547efc17e088",
+  "USD": 81877,
+  "participants": 51
+  },
+  "wallet2": {
+  "wallet": "0:ca81bddd793401c5017871da19d45297a5a0a5b1c2b20f37ca3426997aff273e",
+  "USD": 64236,
+  "participants": 6
+  },
+  "total": {
+  "USD": 146113,
+  "participants": 57
+  }
+}

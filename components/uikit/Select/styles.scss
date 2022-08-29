@@ -1,0 +1,212 @@
+.select {
+  width: 14.4rem;
+  height: 4.4rem;
+  padding-left: 2.2rem;
+  display: flex;
+  align-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  background-color: var(--btn-primary);
+  color: var(--text-main);
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 5rem;
+
+  .selectRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .selectToggle {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+
+      .selectList {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        width: 8.5rem;
+        color: var(--text-main);
+      }
+  
+      .arrowIcon {
+        width: 2rem;
+        transition: all 0.25s ease;
+        margin-left: 0rem;
+  
+        &.opened {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    // overflow-y: scroll;
+    top: 5rem;
+    left: 40rem;
+    width: 14.4rem;
+    max-height: 25.6rem;
+    padding: 0.8rem;
+    background-color: var(--btn-primary);
+    opacity: 1;
+    border-radius: 1rem;
+    z-index: 10000;
+
+    &.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .dropdownWrap {
+      padding: 0.5rem 1.6rem;
+      cursor: pointer;
+
+      .selectList {
+        color: var(--text-main);
+      }
+    }
+  }
+}
+
+.modal {
+  z-index: 10000;
+  display: none;
+
+  &.opened {
+    display: block;
+  }
+  
+  .modaltor {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // overflow: scroll;
+    z-index: 10000;
+
+    .modaltorBackgroundSelect {
+      background-color: #000;
+      width: 100rem;
+
+      .closeicon {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 1rem 1rem 1rem;
+        font-style: normal;
+        z-index: 10000;
+      }
+        
+      .modaltorHeading {
+        padding-top: 5rem;
+        margin-bottom: 5rem;
+        padding-left: 10rem;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10000;
+      }
+    
+      .modaltorText {
+        padding-left: 10rem;
+        padding-bottom: 5rem;
+        width: 100rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 10000;
+
+        .modaltorTextManual {
+          margin-bottom: 3rem;
+        }
+
+        .modaltorTextDownload {
+          display: flex;
+          margin-bottom: 3rem;
+
+          .modaltorTextDownloadImg {
+            width: 15rem;
+          }
+
+          .modaltorTextExpansion {
+            width: 9rem;
+            font-size: 1.7rem;
+            font-weight: 400px;
+            line-height: 2.4rem;
+            color: var(--text-main);
+            border-bottom: 0.1rem solid var(--text-main);
+          }
+        }
+
+        .modaltorBlockLink {
+          display: flex;
+          flex-direction: column;
+
+          .modaltorTextLink {
+            width: 9rem;
+            font-size: 1.7rem;
+            font-weight: 400px;
+            line-height: 2.4rem;
+            color: var(--text-main);
+            border-bottom: 0.1rem solid var(--text-main);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .select {
+    .dropdownMenu {
+      top: 12.5rem;
+      left: 8rem;
+    }
+  }
+  
+  .modal {
+    z-index: 10;
+    
+    .modaltor {
+      background-color: rgb(0, 0, 38, 0.4);
+      backdrop-filter: blur(0.3rem);
+      // overflow: scroll;
+
+      .modaltorBackgroundSelect {
+        background-color: #000;
+        width: 35rem;
+
+        .closeiconMobil {
+          display: flex;
+          justify-content: flex-end;
+          padding: 1rem 1rem 0rem 1rem;
+          font-style: normal;
+        }
+          
+        .modaltorHeading {
+          padding-top: 5rem;
+          margin-bottom: 2rem;
+          padding-left: 1rem;
+          display: flex;
+          justify-content: space-between;
+        }
+      
+        .modaltorText {
+          padding-left: 1rem;
+          padding-bottom: 5rem;
+          width: 34rem;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.disableScroll {
+	overflow: hidden;
+}

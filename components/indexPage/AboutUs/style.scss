@@ -1,0 +1,221 @@
+.aboutUs{
+  padding-top: 1rem;
+
+  .navbar{
+    margin-bottom: 9.6rem;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .blocks{
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+
+    .servers{
+      margin-top: 1.7rem;
+      
+      .serversText{
+        max-width: 18.4rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2rem;
+        color: var(--white);
+      }
+    }
+
+    .blockText{
+      max-width: 71.5rem;
+
+      .aboutUsHeading{
+        margin-bottom: 6.4rem;
+        letter-spacing: -0.02em;
+      }
+
+      .serverss{
+        display: none;
+        
+        .serversText{
+          max-width: 22.4rem;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2rem;
+          color: var(--white);
+        }
+      }
+
+      .border{
+        margin-bottom: 7rem;
+        border-bottom: 0.2rem solid;
+        width: 8.7rem;
+        border-color: var(--white);
+        opacity: 0.1;
+      }
+
+      .aboutUsEnumeration{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 13rem;
+
+        .blockEnumeration{
+          max-width: 33.6rem;
+
+          &:not(:last-of-type){
+            margin-right: 2rem;
+            margin-bottom: 6.4rem;
+          }
+
+          .imgEnumeration{
+            margin-bottom: 3.7rem;
+          }
+
+          .imgOne{
+            width: 8.9rem;
+            height: 7.2rem;
+          }
+
+          .imgTwo{
+            width: 8.6rem;
+            height: 7.2rem;
+          }
+
+          .imgThree{
+            width: 7.5rem;
+            height: 7.2rem;
+          }
+
+          .textEnumeration{
+            margin-bottom: 0.6rem;
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 3.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .blurAboutUs{
+    position: absolute;
+    top: 20rem;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px){
+  .aboutUs{
+    padding-top: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  
+    .navbar{
+      margin-bottom: 9.6rem;
+      z-index: 10;
+      position: relative;
+    }
+    
+    .blocks{
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+      position: relative;
+  
+      .servers{
+        display: none;
+      }
+  
+      .blockText{
+        max-width: 100%;
+        margin: 0 auto;
+  
+        .aboutUsHeading{
+          max-width: 28rem;
+          font-size: 3.2rem;
+          font-weight: 400;
+          line-height: 4rem;
+          margin-bottom: 3rem;
+          letter-spacing: 0.0em;
+        }
+
+        .serverss{
+          display: block;
+          margin-top: 1.7rem;
+          
+          .serversTexts{
+            margin-bottom: 4.6rem;
+            max-width: 20.6rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            color: var(--white);
+          }
+        }
+  
+        .border{
+          margin-bottom: 4.8rem;
+          border-bottom: 0.2rem solid;
+          width: 11rem;
+          border-color: var(--white);
+          opacity: 0.1;
+        }
+  
+        .aboutUsEnumeration{
+          margin-bottom: 0rem;
+          
+          .blockEnumeration{
+            max-width: 28rem;
+  
+            &:not(:last-of-type){
+              margin-right: 2rem;
+              margin-bottom: 3.7rem;
+            }
+  
+            .imgEnumeration{
+              margin-bottom: 2.6rem;
+            }
+  
+            .imgOne{
+              width: 7.6rem;
+              height: 6.2rem;
+            }
+  
+            .imgTwo{
+              width: 7.6rem;
+              height: 6.2rem;
+            }
+  
+            .imgThree{
+              width: 7.6rem;
+              height: 7.2rem;
+            }
+  
+            .textEnumeration{
+              margin-bottom: 0.4rem;
+              font-size: 2rem;
+              font-weight: 400;
+              line-height: 3rem;
+            }
+
+            .descriptionEnumeration{
+              max-width: 28rem;
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 2rem;
+              letter-spacing: -0.01em;
+            }
+          }
+        }
+      }
+    }
+  
+    .blurAboutUs{
+      position: absolute;
+      top: 40rem;
+      width: 70%;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}

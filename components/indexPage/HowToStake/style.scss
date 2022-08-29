@@ -1,0 +1,239 @@
+.howToStake {
+  display: flex;
+  flex-direction: column;
+
+  .howToStakeHeading {
+    margin-bottom: 6.4rem;
+    letter-spacing: -0.02em;
+    z-index: 10;
+    position: relative;
+  }
+
+  .blocks {
+    margin-bottom: 0;
+    display: flex;
+    z-index: 10;
+    position: relative;
+
+    .howToStakeEnumeration {
+      width: 40rem;
+      padding-top: 4rem;
+      padding-left: 3rem;
+      padding-bottom: 4rem;
+      border-radius: 2.4rem;
+      border: 0.1rem solid #ffffff1a;
+      background: #14163980;
+
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+
+      .ImgEnumeration {
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-bottom: 3rem;
+      }
+
+      .textEnumeration {
+        margin-bottom: 0.8rem;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 3.2rem;
+      }
+
+      .descriptionEnumeration {
+        max-width: 29.6rem;
+        margin-bottom: 9.4rem;
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        color: var(--text-secondary);
+      }
+      
+      .blockBtn {
+        display: flex;
+        .btnOpen {
+          margin-right: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .blurHowToStakeOne {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 0;
+  }
+
+  .blurHowToStakeTwo {
+    position: absolute;
+    // top: 4000px;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.modal {
+  z-index: 10000;
+  display: none;
+
+  &.opened {
+    display: block;
+  }
+  
+  .modaltor {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // overflow: scroll;
+    z-index: 10000;
+
+    .modaltorBackgroundSelect {
+      background-color: #000;
+      width: 120rem;
+
+      .closeicon {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 1rem 1rem 1rem;
+        font-style: normal;
+        z-index: 10000;
+      }
+        
+      .modaltorHeading {
+        padding-top: 5rem;
+        margin-bottom: 5rem;
+        padding-left: 10rem;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10000;
+      }
+    
+      .modaltorText {
+        padding-left: 10rem;
+        padding-bottom: 5rem;
+        width: 100rem;
+        display: flex;
+        justify-content: center;
+        z-index: 10000;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .howToStake {
+    max-width: 100%;
+ 
+    .howToStakeHeading {
+      margin-bottom: 4rem;
+      font-size: 3.2rem;
+      font-weight: 400;
+      line-height: 4rem;
+      letter-spacing: 0.0em;
+    }
+  
+    .blocks {
+      flex-direction: column;
+  
+      .howToStakeEnumeration {
+        width: 100%;
+        padding-top: 3rem;
+        padding-right: 2.4rem;
+        padding-left: 2.4rem;
+        padding-bottom: 3.2rem;
+        border-radius: 2.4rem;
+        border: 0.1rem solid #ffffff1a;
+        background: #14163980;
+  
+        &:not(:last-of-type) {
+          margin-right: 0;
+          margin-bottom: 2rem;
+        }
+  
+        .ImgEnumeration {
+          width: 6.4rem;
+          height: 6.4rem;
+          margin-bottom: 2.8rem;
+        }
+  
+        .textEnumeration {
+          margin-bottom: 0.8rem;
+        }
+  
+        .descriptionEnumeration {
+          max-width: 23.2rem;
+          margin-bottom: 4rem;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2rem;
+          color: var(--text-secondary);
+        }
+        
+        .blockBtn {
+          display: flex;
+          flex-direction: column;
+          .btnOpen {
+            margin-right: 0;
+            margin-bottom: 1.2rem;
+          }
+        }
+      }
+    }
+  
+    .blurHowToStakeOne {
+      position: absolute;
+      // top: 200vh;
+      left: 0;
+      display: none;
+    }
+  
+    .blurHowToStakeTwo {
+      position: absolute;
+      top: 360rem;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  .modal {
+    z-index: 10;
+    
+    .modaltor {
+      background-color: rgb(0, 0, 38, 0.4);
+      backdrop-filter: blur(0.3rem);
+      // overflow: scroll;
+
+      .modaltorBackgroundSelect {
+        background-color: #000;
+        width: 35rem;
+
+        .closeiconMobil {
+          display: flex;
+          justify-content: flex-end;
+          padding: 1rem 1rem 0rem 1rem;
+          font-style: normal;
+        }
+          
+        .modaltorHeading {
+          padding-top: 5rem;
+          margin-bottom: 2rem;
+          padding-left: 1rem;
+          display: flex;
+          justify-content: space-between;
+        }
+      
+        .modaltorText {
+          padding-left: 1rem;
+          padding-bottom: 5rem;
+          width: 34rem;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

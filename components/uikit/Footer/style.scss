@@ -1,0 +1,214 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  .border {
+    margin-bottom: 11.5rem;
+    border-top: 0.1rem solid var(--white);
+    opacity: 0.1;
+  }
+
+  .blocks {
+    width: 124rem;
+    margin: 0 auto;
+    display: flex;
+  
+    .blockOne {
+      margin-right: 24.4rem;
+       z-index: 10;
+      position: relative;
+  
+      .Contact {
+        margin-bottom: 0.9rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2rem;
+        &::before {
+          content:"";
+          background-color: var(--btn-primary);
+          width: 0.8rem;
+          height: 0.8rem;
+          float: left;
+          margin-top: 0.8rem;
+          margin-right: 0.8rem;
+          border-radius: 50%;
+        }
+      }
+
+      .mail {
+        margin-bottom: 17.9rem;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 3.2rem;
+        letter-spacing: -0.02em;
+      }
+    }
+  
+    .blockTwo {
+      z-index: 10;
+      position: relative;
+  
+      .blockTelegram {
+        .Contact {
+          margin-bottom: 0.8rem;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2rem;
+          &::before {
+            content:"";
+            background-color: var(--btn-primary);
+            width: 0.8rem;
+            height: 0.8rem;
+            float: left;
+            margin-top: 0.8rem;
+            margin-right: 0.8rem;
+            border-radius: 50%;
+          }
+        }
+        
+        .telegram {
+          font-size: 2.4rem;
+          font-weight: 400;
+          line-height: 3.2rem;
+          letter-spacing: -0.02em;
+    
+          .telegramLink {
+            color: var(--white);
+            display: flex;
+  
+            .linkImg {
+              width: 3.2rem;
+              height: 3.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .text {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
+    opacity: 0.4;
+  }
+  
+  .blurFooter {
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    height: 43rem;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  
+    .border {
+      margin-bottom: 6.2rem;
+      border-top: 0.1rem solid var(--white);
+      opacity: 0.1;
+    }
+  
+    .blocks {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    
+      .blockOne {
+        margin-right: 0;
+         z-index: 10;
+        position: relative;
+    
+        .Contact {
+          margin-bottom: 0.9rem;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2rem;
+          &::before {
+            content:"";
+            background-color: var(--btn-primary);
+            width: 0.8rem;
+            height: 0.8rem;
+            float:left;
+            margin-top: 0.8rem;
+            margin-right: 0.8rem;
+            border-radius: 50%;
+          }
+        }
+  
+        .mail {
+          margin-bottom: 4rem;
+          font-size: 2.4rem;
+          font-weight: 400;
+          line-height: 3.2rem;
+          letter-spacing: 0.0em;
+        }
+      }
+    
+      .blockTwo {
+        margin-bottom: 6.3rem;
+        z-index: 10;
+        position: relative;
+    
+        .blockTelegram {
+          .Contact {
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2rem;
+            &::before {
+              content:"";
+              background-color: var(--btn-primary);
+              width: 0.8rem;
+              height: 0.8rem;
+              float:left;
+              margin-top: 0.8rem;
+              margin-right: 0.8rem;
+              border-radius: 50%;
+            }
+          }
+          
+          .telegram {
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 3.2rem;
+            letter-spacing: 0.0em;
+      
+            .telegramLink {
+              color: var(--white);
+              display: flex;
+    
+              .linkImg {
+                margin-left: 1.2rem;
+                width: 3.2rem;
+                height: 3.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .text {
+      margin: 0 auto;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2rem;
+      opacity: 0.4;
+      max-width: 100%;
+      padding-bottom: 2rem;
+    }
+    
+    .blurFooter {
+      position: absolute;
+      width: 100%;
+      height: 35rem;
+      z-index: 1;
+    }
+  }
+}
+

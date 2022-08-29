@@ -1,0 +1,47 @@
+.video {
+  padding-top: 7.3rem;
+  display: flex;
+
+  .playVideo {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .heading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    align-self: center;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 71.6rem;
+    letter-spacing: -0.02em;
+  }
+}
+
+@media (max-width: 768px){
+  .video {
+    margin: 0 auto;
+    display: flex;
+  
+    .playVideo {
+      width: 100%;
+      height: 48rem;
+      object-fit: cover;
+    }
+  
+    .heading {
+      position: absolute;
+      left: 0;
+      right: 0;
+      align-self: center;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 3.2rem;
+      font-weight: 400;
+      line-height: 4rem;
+      max-width: 28rem;
+      letter-spacing: -0.02em;
+    }
+  }
+}
