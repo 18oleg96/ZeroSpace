@@ -9,7 +9,7 @@
         Show QR-code
         <img src="~/assets/images/qrCode.svg" alt="QR-Code" class="imgQrCode">
       </a>
-      <div class="modaltorQR" :class="{opened: this.openedPopup}">
+      <div class="modaltorQR" :class="{opened: this.openedPopup}" @click="openedPopup = false; closePopup()">
         <div class="modaltor">
           <div class="modaltorBackground">
             <div class="modaltorHeadingCard">
@@ -45,11 +45,11 @@
         <input type="text" v-model="addressCode" class="cardInput">
         <div class="window">
           <p class="textWindow">
-            0:A94C82
+            {{addressCode | str_limit1(8)}}
           </p>
           <img src="~/assets/images/points.svg" alt="points" class="imgPoints">
           <p class="textWindow">
-            B37D8C3C
+            {{addressCode | str_limit2(8)}}
           </p>
         </div>
       </div>
@@ -74,7 +74,7 @@
             Assets
           </span>
           <h4 class="number">
-            $ {{USD}}
+            $ {{USD | round | format}}
           </h4>
         </div>
         <div class="blockAssets">
@@ -96,6 +96,28 @@
 <script>
 import Select from '~/components/uikit/Select';
 import QrcodeVue from 'qrcode.vue';
+import round from 'vue-round-filter';
+import Vue from "vue";
+
+Vue.filter('str_limit1', function (value, size) {
+  if (!value) return '';
+  value = value.toString();
+
+  if (value.length <= size) {
+    return value;
+  }
+  return value.substr(0, size);
+});
+
+Vue.filter('str_limit2', function (value, size) {
+  if (!value) return '';
+  value = value.toString();
+
+  if (value.length <= size) {
+    return value;
+  }
+  return value.substr(58, size);
+});
 
 export default {
   components: {
@@ -104,9 +126,15 @@ export default {
   },
   props: {
     heading: String,
+    code1: String,
+    code2: String,
     USD: Number,
     participants: Number,
     addressCode: String,
+  },
+  filters: {
+    round,
+    format: val => `${val}`.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '),
   },
   data() {
     return {
@@ -128,7 +156,6 @@ export default {
     splitText: function () {
       var str = this.addressCode;
       var Address = str.match(/.{1,33}/g);
-      console.log(Address)
     },
     openPopup: () => {
       document.querySelector("body").classList.add("disableScroll");

@@ -16,7 +16,7 @@
                 Total assets
               </p>
               <p class="number">
-                $ {{USD}} 
+                $ {{USD | round | format}}
               </p>
             </div>
             <div class="blockEnumeration">
@@ -32,7 +32,7 @@
                 Yearly profit
               </p>
               <p class="numbers">
-                5%
+                {{reward}}%
               </p>
             </div>
           </div>
@@ -57,6 +57,7 @@
 
 <script>
 import Container from '~/components/uikit/Container';
+import round from 'vue-round-filter';
 
 export default {
   components: {
@@ -65,6 +66,11 @@ export default {
   props: {
     USD: Number,
     participants: Number,
+    reward: Number,
+  },
+  filters: {
+    round,
+    format: val => `${val}`.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 '),
   },
 }
 </script>

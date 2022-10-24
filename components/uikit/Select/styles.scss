@@ -97,7 +97,7 @@
       .closeicon {
         display: flex;
         justify-content: flex-end;
-        padding: 1rem 1rem 1rem 1rem;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
         font-style: normal;
         z-index: 10000;
       }
@@ -129,30 +129,31 @@
           margin-bottom: 3rem;
 
           .modaltorTextDownloadImg {
+            margin-right: 2rem;
             width: 15rem;
           }
 
           .modaltorTextExpansion {
-            width: 9rem;
+            // width: 8rem;
             font-size: 1.7rem;
             font-weight: 400px;
             line-height: 2.4rem;
             color: var(--text-main);
-            border-bottom: 0.1rem solid var(--text-main);
+            // border-bottom: 0.1rem solid var(--text-main);
           }
         }
 
         .modaltorBlockLink {
           display: flex;
-          flex-direction: column;
+          // flex-direction: column;
 
           .modaltorTextLink {
-            width: 9rem;
+            margin-right: 2rem;
+            width: 18rem;
             font-size: 1.7rem;
             font-weight: 400px;
             line-height: 2.4rem;
             color: var(--text-main);
-            border-bottom: 0.1rem solid var(--text-main);
           }
         }
       }
@@ -180,6 +181,11 @@
         background-color: #000;
         width: 35rem;
 
+        .closeicon {
+          padding-top: 1rem;
+          padding-bottom: 0;
+        }
+
         .closeiconMobil {
           display: flex;
           justify-content: flex-end;
@@ -188,7 +194,7 @@
         }
           
         .modaltorHeading {
-          padding-top: 5rem;
+          padding-top: 1rem;
           margin-bottom: 2rem;
           padding-left: 1rem;
           display: flex;
@@ -197,10 +203,28 @@
       
         .modaltorText {
           padding-left: 1rem;
-          padding-bottom: 5rem;
+          padding-bottom: 1rem;
           width: 34rem;
           display: flex;
           justify-content: center;
+
+          .modaltorTextManual {
+            margin-bottom: 2rem;
+          }
+
+          .modaltorTextDownload {
+            margin-bottom: 2rem;
+          }
+
+          .modaltorBlockLink {
+            flex-direction: column;
+            align-items: flex-end;
+  
+            .modaltorTextLink {
+              margin-bottom: 2rem;
+              width: 90%;
+            }
+          }
         }
       }
     }

@@ -68,6 +68,8 @@
 
   .blurHowToStakeTwo {
     position: absolute;
+    width: 80%;
+    height: 80%;
     // top: 4000px;
     right: 0;
     z-index: 1;
@@ -98,9 +100,10 @@
       .closeicon {
         display: flex;
         justify-content: flex-end;
-        padding: 1rem 1rem 1rem 1rem;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
         font-style: normal;
         z-index: 10000;
+        cursor: pointer;
       }
         
       .modaltorHeading {

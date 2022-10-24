@@ -8,6 +8,8 @@
         <div class="cardOne">
           <Card 
             heading="ZeroSpace_01" 
+            code1="вфыв" 
+            code2="вфывфы" 
             :USD="USD1"
             :participants="participants1"
             :addressCode="addressCode1"
@@ -16,6 +18,8 @@
         <div>
           <Card 
             heading="ZeroSpace_02" 
+            code1="34234" 
+            code2="236542364" 
             :USD="USD2"
             :participants="participants2"
             :addressCode="addressCode2"
